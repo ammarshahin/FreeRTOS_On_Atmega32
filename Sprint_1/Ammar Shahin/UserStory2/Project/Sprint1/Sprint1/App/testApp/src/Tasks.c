@@ -75,13 +75,13 @@ void Lcd_Task(void* pvParameters)
 	};
 	while(TRUE)
 	{
-		LCD_Clear();
-		LCD_GotoRowColumn(INITIAL_ZERO,INITIAL_ZERO);
+		LCD_GotoRowColumn(FIRST_ROW,FIRST_COLUMN);
 		LCD_DisplayString(arrRandomStrings[RandomStringindex]);
 		RandomStringindex++;
 		if (RandomStringindex > MAX_RandomStringindex_VALUE)
 		{
 			RandomStringindex = FALSE;
+			LCD_Clear();
 		}
 		vTaskDelay(TASK_DELAY_LCD_VALUE);
 	}

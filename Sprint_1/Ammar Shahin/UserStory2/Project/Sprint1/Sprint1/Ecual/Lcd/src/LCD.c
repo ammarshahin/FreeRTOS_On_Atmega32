@@ -37,9 +37,9 @@
 /************************************************************************/
 /*                           Private Macros                             */
 /************************************************************************/
-#define NUMBER_TO_CHAR_FACTOR 48
-#define NUMBER_HUNDRED 100
-#define NUMBER_TEN 10
+#define NUMBER_TO_CHAR_FACTOR	48
+#define NUMBER_HUNDRED			100
+#define NUMBER_TEN				10
 
 #define GOTO_ROW_COL_MASK1 0x80
 #define GOTO_ROW_COL_MASK2 0x5
@@ -71,7 +71,7 @@ static void LCD_SendCommand(uint8 Command)
 	Gpio_PinWrite(LCD_PORT,BIT4,((Command>>4)&1) );
 	Gpio_PinWrite(LCD_PORT,LCD_EN,HIGH);
 	
-	vTaskDelay(COMMON_DELAY_US);
+	
 
 	Gpio_PinWrite(LCD_PORT,LCD_EN,LOW);
 	
@@ -81,7 +81,7 @@ static void LCD_SendCommand(uint8 Command)
 	Gpio_PinWrite(LCD_PORT,BIT4,((Command>>0)&1) );
 	Gpio_PinWrite(LCD_PORT,LCD_EN,HIGH);
 	
-	vTaskDelay(COMMON_DELAY_US);
+	
 	
 	Gpio_PinWrite(LCD_PORT,LCD_EN,LOW);
 }
@@ -102,11 +102,11 @@ EnumLCDErrorState_type LCD_Init(void)
 	{
 		Gpio_PortDirection(LCD_PORT,SET_OUT);
 		LCD_SendCommand(LCD_CursorHome);
-		vTaskDelay(COMMON_DELAY_US);
+		
 		LCD_SendCommand(LCD_Set4Bit2Lin);
-		vTaskDelay(COMMON_DELAY_US);
+		
 		LCD_SendCommand(LCD_DisOnCurOnBliOff);
-		vTaskDelay(COMMON_DELAY_US);
+		
 		LCD_SendCommand(LCD_IncOnShiOff);
 		InitState = LCD_INITALIZED;
 	}
@@ -138,8 +138,6 @@ void LCD_DisplayChar(char Data)
 			
 		Gpio_PinWrite(LCD_PORT,LCD_EN, HIGH);
 			
-		vTaskDelay(COMMON_DELAY_US);
-
 		/* Send the Second Part of the Char */
 		Gpio_PinWrite(LCD_PORT,LCD_EN, LOW);
 
@@ -151,7 +149,7 @@ void LCD_DisplayChar(char Data)
 
 		// Send Pules
 		Gpio_PinWrite(LCD_PORT,LCD_EN, HIGH);
-		vTaskDelay(COMMON_DELAY_US);
+		
 		Gpio_PinWrite(LCD_PORT,LCD_EN, LOW);
 	}
 	else
