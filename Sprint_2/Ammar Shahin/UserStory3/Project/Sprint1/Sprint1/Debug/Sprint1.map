@@ -515,7 +515,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x2b0c
+.text           0x00000000     0x2ad4
  *(.vectors)
  .vectors       0x00000000       0x54 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega32/avr5/crtatmega32.o
                 0x00000000                __vector_default
@@ -600,175 +600,175 @@ END GROUP
                 0x00000092       0x7c App/testApp/src/Tasks.o
                 0x00000092                Init_Task
  .text.Display_Task
-                0x0000010e      0x1e0 App/testApp/src/Tasks.o
+                0x0000010e      0x1e4 App/testApp/src/Tasks.o
                 0x0000010e                Display_Task
  .text.PB0_Task
-                0x000002ee       0xbc App/testApp/src/Tasks.o
-                0x000002ee                PB0_Task
- .text.main     0x000003aa       0x94 App/testApp/src/testApp.o
-                0x000003aa                main
+                0x000002f2       0x80 App/testApp/src/Tasks.o
+                0x000002f2                PB0_Task
+ .text.main     0x00000372       0x94 App/testApp/src/testApp.o
+                0x00000372                main
  .text.LCD_SendCommand
-                0x0000043e       0xe4 Ecual/Lcd/src/LCD.o
+                0x00000406       0xe4 Ecual/Lcd/src/LCD.o
  .text.LCD_Init
-                0x00000522       0x4a Ecual/Lcd/src/LCD.o
-                0x00000522                LCD_Init
+                0x000004ea       0x4a Ecual/Lcd/src/LCD.o
+                0x000004ea                LCD_Init
  .text.LCD_DisplayChar
-                0x0000056c       0xee Ecual/Lcd/src/LCD.o
-                0x0000056c                LCD_DisplayChar
+                0x00000534       0xee Ecual/Lcd/src/LCD.o
+                0x00000534                LCD_DisplayChar
  .text.LCD_DisplayString
-                0x0000065a       0x5c Ecual/Lcd/src/LCD.o
-                0x0000065a                LCD_DisplayString
+                0x00000622       0x5c Ecual/Lcd/src/LCD.o
+                0x00000622                LCD_DisplayString
  .text.LCD_Clear
-                0x000006b6       0x16 Ecual/Lcd/src/LCD.o
-                0x000006b6                LCD_Clear
+                0x0000067e       0x16 Ecual/Lcd/src/LCD.o
+                0x0000067e                LCD_Clear
  .text.LCD_GotoRowColumn
-                0x000006cc       0x2e Ecual/Lcd/src/LCD.o
-                0x000006cc                LCD_GotoRowColumn
+                0x00000694       0x2e Ecual/Lcd/src/LCD.o
+                0x00000694                LCD_GotoRowColumn
  .text.Led_Init
-                0x000006fa       0x94 Ecual/Led/src/Led.o
-                0x000006fa                Led_Init
- .text.Led_On   0x0000078e       0x6c Ecual/Led/src/Led.o
-                0x0000078e                Led_On
- .text.Led_Off  0x000007fa       0x6c Ecual/Led/src/Led.o
-                0x000007fa                Led_Off
+                0x000006c2       0x94 Ecual/Led/src/Led.o
+                0x000006c2                Led_Init
+ .text.Led_On   0x00000756       0x6c Ecual/Led/src/Led.o
+                0x00000756                Led_On
+ .text.Led_Off  0x000007c2       0x6c Ecual/Led/src/Led.o
+                0x000007c2                Led_Off
  .text.pushButton_Init
-                0x00000866       0x24 Ecual/PB/src/pushButton.o
-                0x00000866                pushButton_Init
+                0x0000082e       0x24 Ecual/PB/src/pushButton.o
+                0x0000082e                pushButton_Init
  .text.SSD_Init_BCD
-                0x0000088a       0xa0 Ecual/SSD/src/SSD.o
-                0x0000088a                SSD_Init_BCD
+                0x00000852       0xa0 Ecual/SSD/src/SSD.o
+                0x00000852                SSD_Init_BCD
  .text.SSD_Display_BCD
-                0x0000092a       0x26 Ecual/SSD/src/SSD.o
-                0x0000092a                SSD_Display_BCD
+                0x000008f2       0x26 Ecual/SSD/src/SSD.o
+                0x000008f2                SSD_Display_BCD
  .text.xEventGroupCreate
-                0x00000950       0x40 Firmware/FreeRTOS/src/event_groups.o
-                0x00000950                xEventGroupCreate
+                0x00000918       0x40 Firmware/FreeRTOS/src/event_groups.o
+                0x00000918                xEventGroupCreate
  .text.xEventGroupWaitBits
-                0x00000990      0x192 Firmware/FreeRTOS/src/event_groups.o
-                0x00000990                xEventGroupWaitBits
+                0x00000958      0x192 Firmware/FreeRTOS/src/event_groups.o
+                0x00000958                xEventGroupWaitBits
  .text.xEventGroupClearBits
-                0x00000b22       0x72 Firmware/FreeRTOS/src/event_groups.o
-                0x00000b22                xEventGroupClearBits
+                0x00000aea       0x72 Firmware/FreeRTOS/src/event_groups.o
+                0x00000aea                xEventGroupClearBits
  .text.xEventGroupSetBits
-                0x00000b94      0x17a Firmware/FreeRTOS/src/event_groups.o
-                0x00000b94                xEventGroupSetBits
+                0x00000b5c      0x17a Firmware/FreeRTOS/src/event_groups.o
+                0x00000b5c                xEventGroupSetBits
  .text.prvTestWaitCondition
-                0x00000d0e       0x64 Firmware/FreeRTOS/src/event_groups.o
+                0x00000cd6       0x64 Firmware/FreeRTOS/src/event_groups.o
  .text.pvPortMalloc
-                0x00000d72       0xaa Firmware/FreeRTOS/src/heap_1.o
-                0x00000d72                pvPortMalloc
+                0x00000d3a       0xaa Firmware/FreeRTOS/src/heap_1.o
+                0x00000d3a                pvPortMalloc
  .text.vPortFree
-                0x00000e1c       0x1a Firmware/FreeRTOS/src/heap_1.o
-                0x00000e1c                vPortFree
+                0x00000de4       0x1a Firmware/FreeRTOS/src/heap_1.o
+                0x00000de4                vPortFree
  .text.vListInitialise
-                0x00000e36       0x6c Firmware/FreeRTOS/src/list.o
-                0x00000e36                vListInitialise
+                0x00000dfe       0x6c Firmware/FreeRTOS/src/list.o
+                0x00000dfe                vListInitialise
  .text.vListInitialiseItem
-                0x00000ea2       0x24 Firmware/FreeRTOS/src/list.o
-                0x00000ea2                vListInitialiseItem
+                0x00000e6a       0x24 Firmware/FreeRTOS/src/list.o
+                0x00000e6a                vListInitialiseItem
  .text.vListInsertEnd
-                0x00000ec6       0x9e Firmware/FreeRTOS/src/list.o
-                0x00000ec6                vListInsertEnd
+                0x00000e8e       0x9e Firmware/FreeRTOS/src/list.o
+                0x00000e8e                vListInsertEnd
  .text.vListInsert
-                0x00000f64       0xf0 Firmware/FreeRTOS/src/list.o
-                0x00000f64                vListInsert
+                0x00000f2c       0xf0 Firmware/FreeRTOS/src/list.o
+                0x00000f2c                vListInsert
  .text.uxListRemove
-                0x00001054       0xae Firmware/FreeRTOS/src/list.o
-                0x00001054                uxListRemove
+                0x0000101c       0xae Firmware/FreeRTOS/src/list.o
+                0x0000101c                uxListRemove
  .text.pxPortInitialiseStack
-                0x00001102      0x352 Firmware/FreeRTOS/src/port.o
-                0x00001102                pxPortInitialiseStack
+                0x000010ca      0x352 Firmware/FreeRTOS/src/port.o
+                0x000010ca                pxPortInitialiseStack
  .text.xPortStartScheduler
-                0x00001454       0x6a Firmware/FreeRTOS/src/port.o
-                0x00001454                xPortStartScheduler
+                0x0000141c       0x6a Firmware/FreeRTOS/src/port.o
+                0x0000141c                xPortStartScheduler
  .text.vPortYield
-                0x000014be       0xb4 Firmware/FreeRTOS/src/port.o
-                0x000014be                vPortYield
+                0x00001486       0xb4 Firmware/FreeRTOS/src/port.o
+                0x00001486                vPortYield
  .text.vPortYieldFromTick
-                0x00001572       0xbc Firmware/FreeRTOS/src/port.o
-                0x00001572                vPortYieldFromTick
+                0x0000153a       0xbc Firmware/FreeRTOS/src/port.o
+                0x0000153a                vPortYieldFromTick
  .text.prvSetupTimerInterrupt
-                0x0000162e       0xc4 Firmware/FreeRTOS/src/port.o
+                0x000015f6       0xc4 Firmware/FreeRTOS/src/port.o
  .text.__vector_7
-                0x000016f2        0x8 Firmware/FreeRTOS/src/port.o
-                0x000016f2                __vector_7
+                0x000016ba        0x8 Firmware/FreeRTOS/src/port.o
+                0x000016ba                __vector_7
  .text.xTaskCreate
-                0x000016fa       0xfa Firmware/FreeRTOS/src/tasks.o
-                0x000016fa                xTaskCreate
+                0x000016c2       0xfa Firmware/FreeRTOS/src/tasks.o
+                0x000016c2                xTaskCreate
  .text.prvInitialiseNewTask
-                0x000017f4      0x1a8 Firmware/FreeRTOS/src/tasks.o
+                0x000017bc      0x1a8 Firmware/FreeRTOS/src/tasks.o
  .text.prvAddNewTaskToReadyList
-                0x0000199c       0xfc Firmware/FreeRTOS/src/tasks.o
+                0x00001964       0xfc Firmware/FreeRTOS/src/tasks.o
  .text.vTaskDelay
-                0x00001a98       0x46 Firmware/FreeRTOS/src/tasks.o
-                0x00001a98                vTaskDelay
+                0x00001a60       0x46 Firmware/FreeRTOS/src/tasks.o
+                0x00001a60                vTaskDelay
  .text.vTaskSuspend
-                0x00001ade       0xda Firmware/FreeRTOS/src/tasks.o
-                0x00001ade                vTaskSuspend
+                0x00001aa6       0xda Firmware/FreeRTOS/src/tasks.o
+                0x00001aa6                vTaskSuspend
  .text.prvTaskIsTaskSuspended
-                0x00001bb8       0x60 Firmware/FreeRTOS/src/tasks.o
+                0x00001b80       0x60 Firmware/FreeRTOS/src/tasks.o
  .text.vTaskResume
-                0x00001c18       0xd0 Firmware/FreeRTOS/src/tasks.o
-                0x00001c18                vTaskResume
+                0x00001be0       0xd0 Firmware/FreeRTOS/src/tasks.o
+                0x00001be0                vTaskResume
  .text.vTaskStartScheduler
-                0x00001ce8       0x6a Firmware/FreeRTOS/src/tasks.o
-                0x00001ce8                vTaskStartScheduler
+                0x00001cb0       0x6a Firmware/FreeRTOS/src/tasks.o
+                0x00001cb0                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x00001d52       0x1a Firmware/FreeRTOS/src/tasks.o
-                0x00001d52                vTaskSuspendAll
+                0x00001d1a       0x1a Firmware/FreeRTOS/src/tasks.o
+                0x00001d1a                vTaskSuspendAll
  .text.xTaskResumeAll
-                0x00001d6c      0x12e Firmware/FreeRTOS/src/tasks.o
-                0x00001d6c                xTaskResumeAll
+                0x00001d34      0x12e Firmware/FreeRTOS/src/tasks.o
+                0x00001d34                xTaskResumeAll
  .text.xTaskIncrementTick
-                0x00001e9a      0x1da Firmware/FreeRTOS/src/tasks.o
-                0x00001e9a                xTaskIncrementTick
+                0x00001e62      0x1da Firmware/FreeRTOS/src/tasks.o
+                0x00001e62                xTaskIncrementTick
  .text.vTaskSwitchContext
-                0x00002074       0xe8 Firmware/FreeRTOS/src/tasks.o
-                0x00002074                vTaskSwitchContext
+                0x0000203c       0xe8 Firmware/FreeRTOS/src/tasks.o
+                0x0000203c                vTaskSwitchContext
  .text.vTaskPlaceOnUnorderedEventList
-                0x0000215c       0x64 Firmware/FreeRTOS/src/tasks.o
-                0x0000215c                vTaskPlaceOnUnorderedEventList
+                0x00002124       0x64 Firmware/FreeRTOS/src/tasks.o
+                0x00002124                vTaskPlaceOnUnorderedEventList
  .text.vTaskRemoveFromUnorderedEventList
-                0x000021c0       0xc8 Firmware/FreeRTOS/src/tasks.o
-                0x000021c0                vTaskRemoveFromUnorderedEventList
+                0x00002188       0xc8 Firmware/FreeRTOS/src/tasks.o
+                0x00002188                vTaskRemoveFromUnorderedEventList
  .text.prvIdleTask
-                0x00002288       0x14 Firmware/FreeRTOS/src/tasks.o
+                0x00002250       0x14 Firmware/FreeRTOS/src/tasks.o
  .text.prvInitialiseTaskLists
-                0x0000229c       0x84 Firmware/FreeRTOS/src/tasks.o
+                0x00002264       0x84 Firmware/FreeRTOS/src/tasks.o
  .text.prvCheckTasksWaitingTermination
-                0x00002320       0x62 Firmware/FreeRTOS/src/tasks.o
+                0x000022e8       0x62 Firmware/FreeRTOS/src/tasks.o
  .text.prvDeleteTCB
-                0x00002382       0x30 Firmware/FreeRTOS/src/tasks.o
+                0x0000234a       0x30 Firmware/FreeRTOS/src/tasks.o
  .text.prvResetNextTaskUnblockTime
-                0x000023b2       0x5e Firmware/FreeRTOS/src/tasks.o
+                0x0000237a       0x5e Firmware/FreeRTOS/src/tasks.o
  .text.uxTaskResetEventItemValue
-                0x00002410       0x54 Firmware/FreeRTOS/src/tasks.o
-                0x00002410                uxTaskResetEventItemValue
+                0x000023d8       0x54 Firmware/FreeRTOS/src/tasks.o
+                0x000023d8                uxTaskResetEventItemValue
  .text.prvAddCurrentTaskToDelayedList
-                0x00002464       0xf4 Firmware/FreeRTOS/src/tasks.o
+                0x0000242c       0xf4 Firmware/FreeRTOS/src/tasks.o
  .text.Gpio_PortDirection
-                0x00002558       0x6e Mcal/Gpio/src/Gpio.o
-                0x00002558                Gpio_PortDirection
+                0x00002520       0x6e Mcal/Gpio/src/Gpio.o
+                0x00002520                Gpio_PortDirection
  .text.Gpio_PinDirection
-                0x000025c6      0x158 Mcal/Gpio/src/Gpio.o
-                0x000025c6                Gpio_PinDirection
+                0x0000258e      0x158 Mcal/Gpio/src/Gpio.o
+                0x0000258e                Gpio_PinDirection
  .text.Gpio_PinWrite
-                0x0000271e      0x13e Mcal/Gpio/src/Gpio.o
-                0x0000271e                Gpio_PinWrite
+                0x000026e6      0x13e Mcal/Gpio/src/Gpio.o
+                0x000026e6                Gpio_PinWrite
  .text.Gpio_PinRead
-                0x0000285c       0xcc Mcal/Gpio/src/Gpio.o
-                0x0000285c                Gpio_PinRead
+                0x00002824       0xcc Mcal/Gpio/src/Gpio.o
+                0x00002824                Gpio_PinRead
  .text.Gpio_LowerNibbleDirection
-                0x00002928      0x132 Mcal/Gpio/src/Gpio.o
-                0x00002928                Gpio_LowerNibbleDirection
+                0x000028f0      0x132 Mcal/Gpio/src/Gpio.o
+                0x000028f0                Gpio_LowerNibbleDirection
  .text.Gpio_LowerNibbleWrite
-                0x00002a5a       0xae Mcal/Gpio/src/Gpio.o
-                0x00002a5a                Gpio_LowerNibbleWrite
-                0x00002b08                . = ALIGN (0x2)
+                0x00002a22       0xae Mcal/Gpio/src/Gpio.o
+                0x00002a22                Gpio_LowerNibbleWrite
+                0x00002ad0                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00002b08        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x00002b08                _exit
-                0x00002b08                exit
+ .fini9         0x00002ad0        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00002ad0                _exit
+                0x00002ad0                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -787,11 +787,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00002b08        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00002ad0        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00002b0c                _etext = .
+                0x00002ad4                _etext = .
 
-.data           0x00800060       0x5e load address 0x00002b0c
+.data           0x00800060       0x5e load address 0x00002ad4
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -874,8 +874,8 @@ END GROUP
                 0x0080071e        0x1 Firmware/FreeRTOS/src/tasks.o
  *(COMMON)
                 0x0080071f                PROVIDE (__bss_end, .)
-                0x00002b0c                __data_load_start = LOADADDR (.data)
-                0x00002b6a                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00002ad4                __data_load_start = LOADADDR (.data)
+                0x00002b32                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x0080071f        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -987,21 +987,21 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x33b5
+.debug_info     0x00000000     0x33a7
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_info    0x000004e6      0x318 App/testApp/src/Tasks.o
- .debug_info    0x000007fe       0xe6 App/testApp/src/testApp.o
- .debug_info    0x000008e4      0x272 Ecual/Lcd/src/LCD.o
- .debug_info    0x00000b56      0x14b Ecual/Led/src/Led.o
- .debug_info    0x00000ca1      0x175 Ecual/PB/src/pushButton.o
- .debug_info    0x00000e16      0x26a Ecual/SSD/src/SSD.o
- .debug_info    0x00001080      0x666 Firmware/FreeRTOS/src/event_groups.o
- .debug_info    0x000016e6      0x170 Firmware/FreeRTOS/src/heap_1.o
- .debug_info    0x00001856      0x2bb Firmware/FreeRTOS/src/list.o
- .debug_info    0x00001b11      0x1ed Firmware/FreeRTOS/src/port.o
- .debug_info    0x00001cfe     0x127d Firmware/FreeRTOS/src/tasks.o
- .debug_info    0x00002f7b      0x43a Mcal/Gpio/src/Gpio.o
+ .debug_info    0x000004e6      0x30a App/testApp/src/Tasks.o
+ .debug_info    0x000007f0       0xe6 App/testApp/src/testApp.o
+ .debug_info    0x000008d6      0x272 Ecual/Lcd/src/LCD.o
+ .debug_info    0x00000b48      0x14b Ecual/Led/src/Led.o
+ .debug_info    0x00000c93      0x175 Ecual/PB/src/pushButton.o
+ .debug_info    0x00000e08      0x26a Ecual/SSD/src/SSD.o
+ .debug_info    0x00001072      0x666 Firmware/FreeRTOS/src/event_groups.o
+ .debug_info    0x000016d8      0x170 Firmware/FreeRTOS/src/heap_1.o
+ .debug_info    0x00001848      0x2bb Firmware/FreeRTOS/src/list.o
+ .debug_info    0x00001b03      0x1ed Firmware/FreeRTOS/src/port.o
+ .debug_info    0x00001cf0     0x127d Firmware/FreeRTOS/src/tasks.o
+ .debug_info    0x00002f6d      0x43a Mcal/Gpio/src/Gpio.o
 
 .debug_abbrev   0x00000000     0x1044
  *(.debug_abbrev)
@@ -1019,21 +1019,21 @@ END GROUP
  .debug_abbrev  0x00000cf9      0x212 Firmware/FreeRTOS/src/tasks.o
  .debug_abbrev  0x00000f0b      0x139 Mcal/Gpio/src/Gpio.o
 
-.debug_line     0x00000000     0x3553
+.debug_line     0x00000000     0x3529
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x115 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_line    0x00000115      0x3b7 App/testApp/src/Tasks.o
- .debug_line    0x000004cc       0xbe App/testApp/src/testApp.o
- .debug_line    0x0000058a      0x29f Ecual/Lcd/src/LCD.o
- .debug_line    0x00000829      0x1ff Ecual/Led/src/Led.o
- .debug_line    0x00000a28      0x191 Ecual/PB/src/pushButton.o
- .debug_line    0x00000bb9      0x276 Ecual/SSD/src/SSD.o
- .debug_line    0x00000e2f      0x4b3 Firmware/FreeRTOS/src/event_groups.o
- .debug_line    0x000012e2      0x1c3 Firmware/FreeRTOS/src/heap_1.o
- .debug_line    0x000014a5      0x212 Firmware/FreeRTOS/src/list.o
- .debug_line    0x000016b7      0x404 Firmware/FreeRTOS/src/port.o
- .debug_line    0x00001abb     0x128d Firmware/FreeRTOS/src/tasks.o
- .debug_line    0x00002d48      0x80b Mcal/Gpio/src/Gpio.o
+ .debug_line    0x00000115      0x38d App/testApp/src/Tasks.o
+ .debug_line    0x000004a2       0xbe App/testApp/src/testApp.o
+ .debug_line    0x00000560      0x29f Ecual/Lcd/src/LCD.o
+ .debug_line    0x000007ff      0x1ff Ecual/Led/src/Led.o
+ .debug_line    0x000009fe      0x191 Ecual/PB/src/pushButton.o
+ .debug_line    0x00000b8f      0x276 Ecual/SSD/src/SSD.o
+ .debug_line    0x00000e05      0x4b3 Firmware/FreeRTOS/src/event_groups.o
+ .debug_line    0x000012b8      0x1c3 Firmware/FreeRTOS/src/heap_1.o
+ .debug_line    0x0000147b      0x212 Firmware/FreeRTOS/src/list.o
+ .debug_line    0x0000168d      0x404 Firmware/FreeRTOS/src/port.o
+ .debug_line    0x00001a91     0x128d Firmware/FreeRTOS/src/tasks.o
+ .debug_line    0x00002d1e      0x80b Mcal/Gpio/src/Gpio.o
 
 .debug_frame    0x00000000      0xf30
  *(.debug_frame)
@@ -1050,32 +1050,32 @@ END GROUP
  .debug_frame   0x000006c0      0x65c Firmware/FreeRTOS/src/tasks.o
  .debug_frame   0x00000d1c      0x214 Mcal/Gpio/src/Gpio.o
 
-.debug_str      0x00000000     0x185b
+.debug_str      0x00000000     0x18c9
  *(.debug_str)
  .debug_str     0x00000000      0x196 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_str     0x00000196      0x32d App/testApp/src/Tasks.o
-                                0x37e (size before relaxing)
- .debug_str     0x000004c3       0x2c App/testApp/src/testApp.o
+ .debug_str     0x00000196      0x33b App/testApp/src/Tasks.o
+                                0x38c (size before relaxing)
+ .debug_str     0x000004d1       0x8c App/testApp/src/testApp.o
                                 0x203 (size before relaxing)
- .debug_str     0x000004ef      0x15f Ecual/Lcd/src/LCD.o
+ .debug_str     0x0000055d      0x15f Ecual/Lcd/src/LCD.o
                                 0x31b (size before relaxing)
- .debug_str     0x0000064e       0x3f Ecual/Led/src/Led.o
+ .debug_str     0x000006bc       0x3f Ecual/Led/src/Led.o
                                 0x1d4 (size before relaxing)
- .debug_str     0x0000068d       0xb6 Ecual/PB/src/pushButton.o
+ .debug_str     0x000006fb       0xb6 Ecual/PB/src/pushButton.o
                                 0x279 (size before relaxing)
- .debug_str     0x00000743       0xe6 Ecual/SSD/src/SSD.o
+ .debug_str     0x000007b1       0xe6 Ecual/SSD/src/SSD.o
                                 0x281 (size before relaxing)
- .debug_str     0x00000829      0x308 Firmware/FreeRTOS/src/event_groups.o
+ .debug_str     0x00000897      0x308 Firmware/FreeRTOS/src/event_groups.o
                                 0x50c (size before relaxing)
- .debug_str     0x00000b31       0xac Firmware/FreeRTOS/src/heap_1.o
+ .debug_str     0x00000b9f       0xac Firmware/FreeRTOS/src/heap_1.o
                                 0x235 (size before relaxing)
- .debug_str     0x00000bdd       0xad Firmware/FreeRTOS/src/list.o
+ .debug_str     0x00000c4b       0xad Firmware/FreeRTOS/src/list.o
                                 0x2e3 (size before relaxing)
- .debug_str     0x00000c8a       0xf9 Firmware/FreeRTOS/src/port.o
+ .debug_str     0x00000cf8       0xf9 Firmware/FreeRTOS/src/port.o
                                 0x2b6 (size before relaxing)
- .debug_str     0x00000d83      0x962 Firmware/FreeRTOS/src/tasks.o
+ .debug_str     0x00000df1      0x962 Firmware/FreeRTOS/src/tasks.o
                                 0xc63 (size before relaxing)
- .debug_str     0x000016e5      0x176 Mcal/Gpio/src/Gpio.o
+ .debug_str     0x00001753      0x176 Mcal/Gpio/src/Gpio.o
                                 0x2fd (size before relaxing)
 
 .debug_loc      0x00000000     0x1f29

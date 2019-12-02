@@ -33,6 +33,11 @@
 #define  TICK_TO_WAIT							100
 #define	 NUMBER_TO_CHAR							48
 #define  MAX_SSD_NUMBER							10
+
+#define SHORT_PRESSING_BIT BIT0
+#define LONG_PRESSING_BIT BIT1
+#define LONG_LONG_PRESSING_BIT BIT2
+
 /************************************************************************/
 /*					      Global Variables						        */
 /************************************************************************/
@@ -116,12 +121,12 @@ void Display_Task(void* pvParameters)
 		the event group.  Clear the bits before exiting. */
 		uxBits = xEventGroupWaitBits(
 				xCreatedEventGroup,		/* The event group being tested. */
-				( BIT0 | BIT1 | BIT2 ),	/* The bits within the event group to wait for. */
+				( SHORT_PRESSING_BIT | LONG_PRESSING_BIT | LONG_LONG_PRESSING_BIT ),	/* The bits within the event group to wait for. */
 				pdTRUE,					/* BITs should be cleared before returning. */
 				pdFALSE,			    /* Don't wait for both bits, either bit will do. */
 				xTicksToWait );		    /* Wait a maximum of 100ms for either bit to be set. */
 		
-		if( ( uxBits & (BIT2 | BIT1 | BIT0 ) ) == (BIT2 | BIT1 | BIT0 ) )
+		if( ( uxBits & ( SHORT_PRESSING_BIT | LONG_PRESSING_BIT | LONG_LONG_PRESSING_BIT ) ) == ( SHORT_PRESSING_BIT | LONG_PRESSING_BIT | LONG_LONG_PRESSING_BIT ) )
 		{
 			for(Number_Index = INITIAL_ZERO ; Number_Index < ARRAY_SIZE ; Number_Index++)
 			{
@@ -154,13 +159,17 @@ void Display_Task(void* pvParameters)
 				Led_Off(LED1);
 				LCD_Clear();
 			}
+			/* return to the Home curser */
+			row = FIRST_ROW;
+			col = FIRST_COLUMN;
 			
+			/* Clear the variable that holds the Bit masking */
 			uxBits = xEventGroupClearBits(
 			xCreatedEventGroup,		 /* The event group being updated. */
-			BIT2);
+			LONG_LONG_PRESSING_BIT);
 			uxBits = FALSE;					/* The bits being cleared. */
 		}
-		else if( ( uxBits & ( BIT0 | BIT1 ) ) == ( BIT0 | BIT1 ) )
+		else if( ( uxBits & ( SHORT_PRESSING_BIT | LONG_PRESSING_BIT ) ) == ( SHORT_PRESSING_BIT | LONG_PRESSING_BIT ) )
 		{
 			/* Display the Number to the LCD */
 			LCD_GotoRowColumn(row,col++);
@@ -177,9 +186,9 @@ void Display_Task(void* pvParameters)
 			/* Clear the Bits 0 and 1 */
 			uxBits = xEventGroupClearBits(
 			xCreatedEventGroup,			/* The event group being updated. */
-			( BIT0 | BIT1 ));			/* The bits being cleared. */
+			( SHORT_PRESSING_BIT | LONG_PRESSING_BIT ));			/* The bits being cleared. */
 		}
-		else if( ( uxBits & BIT0 ) == BIT0)
+		else if( ( uxBits & SHORT_PRESSING_BIT ) == SHORT_PRESSING_BIT)
 		{
 			/* xEventGroupWaitBits() returned because just BIT_0 was set. */
 			Number_SSD++;
@@ -195,7 +204,7 @@ void Display_Task(void* pvParameters)
 			/* Clear bit 0 and bit 4 in xEventGroup. */
 			uxBits = xEventGroupClearBits(
 			xCreatedEventGroup,  /* The event group being updated. */
-			BIT0);/* The bits being cleared. */
+			SHORT_PRESSING_BIT);/* The bits being cleared. */
 		} 
 		else
 		{
@@ -213,37 +222,27 @@ void Display_Task(void* pvParameters)
  */
 void PB0_Task(void* pvParameters)
 {	
-	EventBits_t uxBits	= FALSE;
 	uint8 MaskCarrier	= FALSE;
 	
 	while(TRUE)
 	{
 		if(Gpio_PinRead(PUSH_BUTTON0_PORT,PUSH_BUTTON0_PIN))
 		{
-			Led_On(LED0);
-			MaskCarrier |= BIT0;
+			MaskCarrier |= SHORT_PRESSING_BIT;
 			vTaskDelay(TASK_DELAY_LONG_PRESSING_VALUE);
 			if(Gpio_PinRead(PUSH_BUTTON0_PORT,PUSH_BUTTON0_PIN))
 			{
-				Led_Off(LED0);
-				Led_On(LED1);
-				MaskCarrier |= BIT1;
+				MaskCarrier |= LONG_PRESSING_BIT;
 				vTaskDelay(TASK_DELAY_LONG_PRESSING_VALUE);
 				if(Gpio_PinRead(PUSH_BUTTON0_PORT,PUSH_BUTTON0_PIN))
 				{
-					Led_Off(LED1);
-					Led_On(LED2);
-					MaskCarrier |= BIT2;
+					MaskCarrier |= LONG_LONG_PRESSING_BIT;
 				}
 			}
-			uxBits = xEventGroupSetBits(
+			xEventGroupSetBits(
 			xCreatedEventGroup,    /* The event group being updated. */
 			MaskCarrier);/* The bits being set. */
-			vTaskDelay(TASK_DELAY_LONG_PRESSING_VALUE);
-			Led_Off(LED0);
-			Led_Off(LED1);
-			Led_Off(LED2);
-			
+			vTaskDelay(TASK_DELAY_LONG_PRESSING_VALUE);			
 		}
 		MaskCarrier = FALSE;
 		vTaskDelay(TASK_DELAY_PB0_VALUE);
