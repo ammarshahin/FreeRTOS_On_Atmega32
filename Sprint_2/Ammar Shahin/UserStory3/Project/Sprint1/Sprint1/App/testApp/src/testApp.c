@@ -49,7 +49,7 @@ int main(void)
 		// Error Handling Code
 	}
 	
-/******** TaskB ******************/
+/******** TaskPB0 ******************/
 	xReturned = xTaskCreate(PB0_Task,
 	"PB0_Task",
 	PB0_TASK_STACK_SIZE,
@@ -62,21 +62,7 @@ int main(void)
 	{
 		// Error Handling Code
 	}
-	
-/******** TaskB ******************/
-	xReturned = xTaskCreate(PB1_Task,
-	"PB1_Task",
-	PB1_TASK_STACK_SIZE,
-	NULL,
-	PB1_TASK_PRIORITY,
-	&PB1_Handle
-	);
-	
-	if( xReturned != pdPASS )
-	{
-		// Error Handling Code
-	}
-		
+
 /******* Start Scheduler *********/
 	vTaskStartScheduler();
 }

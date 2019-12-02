@@ -176,8 +176,12 @@ void TaskB(void* pvParameters)
 				}
 				else
 				{
-					// Do Nothing
+					
 				}
+			}
+			else
+			{
+				// Do Nothing
 			}
 			vTaskDelay(TASK_DELAY_TASKB_VALUE);
 		}

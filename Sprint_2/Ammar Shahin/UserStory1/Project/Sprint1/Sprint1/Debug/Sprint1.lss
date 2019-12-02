@@ -573,10 +573,10 @@ void TaskB(void* pvParameters)
      3d0:	88 ee       	ldi	r24, 0xE8	; 232
      3d2:	93 e0       	ldi	r25, 0x03	; 3
      3d4:	0e 94 70 0f 	call	0x1ee0	; 0x1ee0 <vTaskDelay>
-				else
-				{
-					// Do Nothing
-				}
+			}
+			else
+			{
+				// Do Nothing
 			}
 			vTaskDelay(TASK_DELAY_TASKB_VALUE);
      3d8:	88 ee       	ldi	r24, 0xE8	; 232
